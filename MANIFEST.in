@@ -1,0 +1,11 @@
+include README.md
+include requirements.txt
+recursive-include storage_rental_platform *.py
+recursive-include storage_rental_platform *.json
+recursive-include storage_rental_platform *.txt
+recursive-include storage_rental_platform fixtures/*
+recursive-include storage_rental_platform masters/*
+recursive-include storage_rental_platform transactions/*
+recursive-include storage_rental_platform reports/*
+recursive-include storage_rental_platform workspace/*
+recursive-include storage_rental_platform config/*

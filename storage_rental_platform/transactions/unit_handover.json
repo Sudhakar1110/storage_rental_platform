@@ -1,0 +1,153 @@
+{
+  "doctype": "DocType",
+  "name": "Unit Handover",
+  "module": "Storage Rental Platform",
+  "autoname": "hash",
+  "is_submittable": 1,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "handover_details",
+      "label": "Handover Details",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "handover_id",
+      "label": "Handover ID",
+      "fieldtype": "Data",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "rental_agreement",
+      "label": "Rental Agreement",
+      "fieldtype": "Link",
+      "options": "Rental Agreement",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "customer",
+      "label": "Customer",
+      "fieldtype": "Link",
+      "options": "Customer Profile",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "storage_unit",
+      "label": "Storage Unit",
+      "fieldtype": "Link",
+      "options": "Storage Unit",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "handover_type",
+      "label": "Handover Type",
+      "fieldtype": "Select",
+      "options": "Move In\nMove Out\nInspection",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "handover_date",
+      "label": "Handover Date",
+      "fieldtype": "Datetime",
+      "default": "Now",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Scheduled\nIn Progress\nCompleted\nCancelled",
+      "default": "Scheduled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "inspection_section",
+      "label": "Inspection Details",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "keys_received",
+      "label": "Keys Received",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "remote_received",
+      "label": "Remote Received",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "access_card_received",
+      "label": "Access Card Received",
+      "fieldtype": "Check"
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "unit_condition",
+      "label": "Unit Condition",
+      "fieldtype": "Select",
+      "options": "Excellent\nGood\nFair\nPoor"
+    },
+    {
+      "fieldname": "cleaning_status",
+      "label": "Cleaning Status",
+      "fieldtype": "Select",
+      "options": "Clean\nNeeds Cleaning\nDirty"
+    },
+    {
+      "fieldname": "meter_reading",
+      "label": "Meter Reading",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "damage_notes",
+      "label": "Damage Notes",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "checklist_items",
+      "label": "Checklist Items",
+      "fieldtype": "Table",
+      "options": "Handover Checklist"
+    },
+    {
+      "fieldname": "notes_section",
+      "label": "Notes",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Storage Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Facility Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1
+    }
+  ]
+}

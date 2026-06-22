@@ -1,0 +1,158 @@
+{
+  "doctype": "DocType",
+  "name": "Storage Booking",
+  "module": "Storage Rental Platform",
+  "autoname": "hash",
+  "is_submittable": 1,
+  "track_changes": 1,
+  "workflow": "Storage Booking Workflow",
+  "fields": [
+    {
+      "fieldname": "booking_details",
+      "label": "Booking Details",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "booking_id",
+      "label": "Booking ID",
+      "fieldtype": "Data",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "customer",
+      "label": "Customer",
+      "fieldtype": "Link",
+      "options": "Customer Profile",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "storage_unit",
+      "label": "Storage Unit",
+      "fieldtype": "Link",
+      "options": "Storage Unit",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "rental_plan",
+      "label": "Rental Plan",
+      "fieldtype": "Link",
+      "options": "Rental Plan",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "booking_date",
+      "label": "Booking Date",
+      "fieldtype": "Date",
+      "default": "Today",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "start_date",
+      "label": "Start Date",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "end_date",
+      "label": "End Date",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nConfirmed\nActive\nCompleted\nCancelled",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "pricing_section",
+      "label": "Pricing",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "monthly_rent",
+      "label": "Monthly Rent",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "security_deposit",
+      "label": "Security Deposit",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "total_amount",
+      "label": "Total Amount",
+      "fieldtype": "Currency",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "discount_amount",
+      "label": "Discount Amount",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "advance_amount",
+      "label": "Advance Amount",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "balance_amount",
+      "label": "Balance Amount",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "notes_section",
+      "label": "Notes",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "special_requirements",
+      "label": "Special Requirements",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Storage Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Facility Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Customer User",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    }
+  ]
+}

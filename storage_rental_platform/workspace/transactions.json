@@ -1,0 +1,11 @@
+{
+  "doctype": "Workspace",
+  "name": "Transactions",
+  "module": "Storage Rental Platform",
+  "icon": "file",
+  "color": "orange",
+  "sequence_id": 3.0,
+  "is_default": 0,
+  "is_hidden": 0,
+  "content": "[\n  {\n    \"type\": \"card\",\n    \"label\": \"Bookings\"\n  },\n  {\n    \"type\": \"link\",\n    \"label\": \"Storage Booking\",\n    \"link_to\": \"Storage Booking\",\n    \"link_type\": \"DocType\"\n  },\n  {\n    \"type\": \"card_break\",\n    \"label\": \"Agreements\"\n  },\n  {\n    \"type\": \"link\",\n    \"label\": \"Rental Agreement\",\n    \"link_to\": \"Rental Agreement\",\n    \"link_type\": \"DocType\"\n  },\n  {\n    \"type\": \"card_break\",\n    \"label\": \"Payments\"\n  },\n  {\n    \"type\": \"link\",\n    \"label\": \"Payment Collection\",\n    \"link_to\": \"Payment Collection\",\n    \"link_type\": \"DocType\"\n  },\n  {\n    \"type\": \"card_break\",\n    \"label\": \"Operations\"\n  },\n  {\n    \"type\": \"link\",\n    \"label\": \"Unit Handover\",\n    \"link_to\": \"Unit Handover\",\n    \"link_type\": \"DocType\"\n  }\n]"
+}

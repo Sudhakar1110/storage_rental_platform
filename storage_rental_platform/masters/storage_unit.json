@@ -1,0 +1,93 @@
+{
+  "doctype": "DocType",
+  "name": "Storage Unit",
+  "module": "Storage Rental Platform",
+  "autoname": "field:unit_number",
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "unit_number",
+      "label": "Unit Number",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "storage_category",
+      "label": "Storage Category",
+      "fieldtype": "Link",
+      "options": "Storage Category",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "facility",
+      "label": "Storage Facility",
+      "fieldtype": "Link",
+      "options": "Storage Facility",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "unit_size",
+      "label": "Unit Size",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "dimensions",
+      "label": "Dimensions (L x W x H)",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "floor",
+      "label": "Floor",
+      "fieldtype": "Int"
+    },
+    {
+      "fieldname": "monthly_rent",
+      "label": "Monthly Rent",
+      "fieldtype": "Currency",
+      "reqd": 1
+    },
+    {
+      "fieldname": "security_deposit",
+      "label": "Security Deposit",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Available\nOccupied\nMaintenance\nReserved",
+      "default": "Available",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amenities",
+      "label": "Amenities",
+      "fieldtype": "Table",
+      "options": "Unit Amenity"
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Storage Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Facility Manager",
+      "read": 1,
+      "write": 1
+    }
+  ]
+}

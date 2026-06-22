@@ -1,0 +1,62 @@
+[
+  {
+    "doctype": "Workflow State",
+    "workflow_state_name": "Draft",
+    "style": "Warning",
+    "description": "Document is in draft state"
+  },
+  {
+    "doctype": "Workflow State",
+    "workflow_state_name": "Confirmed",
+    "style": "Info",
+    "description": "Booking has been confirmed"
+  },
+  {
+    "doctype": "Workflow State",
+    "workflow_state_name": "Active",
+    "style": "Success",
+    "description": "Agreement or booking is active"
+  },
+  {
+    "doctype": "Workflow State",
+    "workflow_state_name": "Completed",
+    "style": "Secondary",
+    "description": "Agreement or booking has been completed"
+  },
+  {
+    "doctype": "Workflow State",
+    "workflow_state_name": "Cancelled",
+    "style": "Danger",
+    "description": "Agreement or booking has been cancelled"
+  },
+  {
+    "doctype": "Workflow State",
+    "workflow_state_name": "Expired",
+    "style": "Danger",
+    "description": "Agreement has expired"
+  },
+  {
+    "doctype": "Workflow State",
+    "workflow_state_name": "Terminated",
+    "style": "Danger",
+    "description": "Agreement has been terminated"
+  },
+  {
+    "doctype": "Workflow State",
+    "workflow_state_name": "Pending Approval",
+    "style": "Warning",
+    "description": "Awaiting approval"
+  },
+  {
+    "doctype": "Workflow State",
+    "workflow_state_name": "Approved",
+    "style": "Success",
+    "description": "Approved"
+  },
+  {
+    "doctype": "Workflow State",
+    "workflow_state_name": "Rejected",
+    "style": "Danger",
+    "description": "Rejected"
+  }
+]

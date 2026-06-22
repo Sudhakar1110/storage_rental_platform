@@ -1,0 +1,26 @@
+[
+  {
+    "doctype": "Role",
+    "role_name": "Storage Administrator",
+    "description": "Full access to all Storage Rental Platform features",
+    "is_custom": 1,
+    "desk_access": 1,
+    "permissions": []
+  },
+  {
+    "doctype": "Role",
+    "role_name": "Facility Manager",
+    "description": "Manage facilities and storage units",
+    "is_custom": 1,
+    "desk_access": 1,
+    "permissions": []
+  },
+  {
+    "doctype": "Role",
+    "role_name": "Customer User",
+    "description": "View and manage own bookings as a customer",
+    "is_custom": 1,
+    "desk_access": 1,
+    "permissions": []
+  }
+]

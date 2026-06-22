@@ -1,0 +1,20 @@
+{
+  "doctype": "DocType",
+  "name": "Unit Amenity",
+  "module": "Storage Rental Platform",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "amenity",
+      "label": "Amenity",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Data"
+    }
+  ],
+  "permissions": []
+}

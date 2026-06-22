@@ -1,0 +1,8 @@
+{
+  "doctype": "Report",
+  "name": "Facility Occupancy Report",
+  "ref_doctype": "Storage Facility",
+  "report_type": "Script Report",
+  "is_standard": "Yes",
+  "module": "Storage Rental Platform"
+}

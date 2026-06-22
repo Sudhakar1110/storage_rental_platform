@@ -1,0 +1,106 @@
+{
+  "doctype": "DocType",
+  "name": "Pricing",
+  "module": "Storage Rental Platform",
+  "autoname": "field:pricing_name",
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "pricing_name",
+      "label": "Pricing Name",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "storage_category",
+      "label": "Storage Category",
+      "fieldtype": "Link",
+      "options": "Storage Category",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "storage_facility",
+      "label": "Storage Facility",
+      "fieldtype": "Link",
+      "options": "Storage Facility",
+      "reqd": 1
+    },
+    {
+      "fieldname": "base_price",
+      "label": "Base Price",
+      "fieldtype": "Currency",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "price_per_day",
+      "label": "Price Per Day",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "price_per_week",
+      "label": "Price Per Week",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "price_per_month",
+      "label": "Price Per Month",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "price_per_quarter",
+      "label": "Price Per Quarter",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "price_per_year",
+      "label": "Price Per Year",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "security_deposit",
+      "label": "Security Deposit",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "is_active",
+      "label": "Is Active",
+      "fieldtype": "Check",
+      "default": "1",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "effective_from",
+      "label": "Effective From",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "effective_to",
+      "label": "Effective To",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Storage Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Facility Manager",
+      "read": 1
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "doctype": "Report",
+  "name": "Unit Availability Report",
+  "ref_doctype": "Storage Unit",
+  "report_type": "Script Report",
+  "is_standard": "Yes",
+  "module": "Storage Rental Platform"
+}

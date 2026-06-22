@@ -1,0 +1,177 @@
+{
+  "doctype": "DocType",
+  "name": "Rental Agreement",
+  "module": "Storage Rental Platform",
+  "autoname": "hash",
+  "is_submittable": 1,
+  "track_changes": 1,
+  "workflow": "Rental Agreement Workflow",
+  "fields": [
+    {
+      "fieldname": "agreement_details",
+      "label": "Agreement Details",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "agreement_id",
+      "label": "Agreement ID",
+      "fieldtype": "Data",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "storage_booking",
+      "label": "Storage Booking",
+      "fieldtype": "Link",
+      "options": "Storage Booking",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "customer",
+      "label": "Customer",
+      "fieldtype": "Link",
+      "options": "Customer Profile",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "storage_unit",
+      "label": "Storage Unit",
+      "fieldtype": "Link",
+      "options": "Storage Unit",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "agreement_date",
+      "label": "Agreement Date",
+      "fieldtype": "Date",
+      "default": "Today",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "start_date",
+      "label": "Start Date",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "end_date",
+      "label": "End Date",
+      "fieldtype": "Date",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Draft\nActive\nExpired\nTerminated",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "terms_section",
+      "label": "Terms",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "monthly_rent",
+      "label": "Monthly Rent",
+      "fieldtype": "Currency",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "security_deposit",
+      "label": "Security Deposit",
+      "fieldtype": "Currency",
+      "reqd": 1
+    },
+    {
+      "fieldname": "total_rent",
+      "label": "Total Rent",
+      "fieldtype": "Currency",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "payment_due_day",
+      "label": "Payment Due Day",
+      "fieldtype": "Int",
+      "default": "5"
+    },
+    {
+      "fieldname": "late_fee",
+      "label": "Late Fee",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "notice_period",
+      "label": "Notice Period (Days)",
+      "fieldtype": "Int",
+      "default": "30"
+    },
+    {
+      "fieldname": "terms_and_conditions",
+      "label": "Terms and Conditions",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "documents_section",
+      "label": "Documents",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "agreement_document",
+      "label": "Agreement Document",
+      "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "id_proof",
+      "label": "ID Proof",
+      "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "address_proof",
+      "label": "Address Proof",
+      "fieldtype": "Attach"
+    },
+    {
+      "fieldname": "notes_section",
+      "label": "Notes",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Storage Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Facility Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "doctype": "Workspace",
+  "name": "Masters",
+  "module": "Storage Rental Platform",
+  "icon": "inventory",
+  "color": "green",
+  "sequence_id": 2.0,
+  "is_default": 0,
+  "is_hidden": 0,
+  "content": "[\n  {\n    \"type\": \"card\",\n    \"label\": \"Master Data\"\n  },\n  {\n    \"type\": \"link\",\n    \"label\": \"Storage Facility\",\n    \"link_to\": \"Storage Facility\",\n    \"link_type\": \"DocType\"\n  },\n  {\n    \"type\": \"link\",\n    \"label\": \"Storage Category\",\n    \"link_to\": \"Storage Category\",\n    \"link_type\": \"DocType\"\n  },\n  {\n    \"type\": \"link\",\n    \"label\": \"Storage Unit\",\n    \"link_to\": \"Storage Unit\",\n    \"link_type\": \"DocType\"\n  },\n  {\n    \"type\": \"card_break\",\n    \"label\": \"Customer Management\"\n  },\n  {\n    \"type\": \"link\",\n    \"label\": \"Customer Profile\",\n    \"link_to\": \"Customer Profile\",\n    \"link_type\": \"DocType\"\n  },\n  {\n    \"type\": \"card_break\",\n    \"label\": \"Pricing\"\n  },\n  {\n    \"type\": \"link\",\n    \"label\": \"Rental Plan\",\n    \"link_to\": \"Rental Plan\",\n    \"link_type\": \"DocType\"\n  },\n  {\n    \"type\": \"link\",\n    \"label\": \"Pricing\",\n    \"link_to\": \"Pricing\",\n    \"link_type\": \"DocType\"\n  }\n]"
+}

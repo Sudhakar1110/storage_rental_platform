@@ -1,0 +1,153 @@
+[
+  {
+    "doctype": "Workflow",
+    "workflow_name": "Storage Booking Workflow",
+    "document_type": "Storage Booking",
+    "is_active": 1,
+    "is_submitted": 0,
+    "override_status": 0,
+    "send_email_alert": 0,
+    "workflow_data": [
+      {
+        "state": "Draft",
+        "doc_status": "0",
+        "allow_edit": "All",
+        "transitions": [
+          {
+            "state": "Confirmed",
+            "action": "Confirm",
+            "next_state": "Confirmed",
+            "allowed": "Storage Administrator",
+            "allowed_user": null
+          },
+          {
+            "state": "Cancelled",
+            "action": "Cancel",
+            "next_state": "Cancelled",
+            "allowed": "Storage Administrator",
+            "allowed_user": null
+          }
+        ]
+      },
+      {
+        "state": "Confirmed",
+        "doc_status": "0",
+        "allow_edit": "All",
+        "transitions": [
+          {
+            "state": "Active",
+            "action": "Activate",
+            "next_state": "Active",
+            "allowed": "Storage Administrator",
+            "allowed_user": null
+          },
+          {
+            "state": "Cancelled",
+            "action": "Cancel",
+            "next_state": "Cancelled",
+            "allowed": "Storage Administrator",
+            "allowed_user": null
+          }
+        ]
+      },
+      {
+        "state": "Active",
+        "doc_status": "1",
+        "allow_edit": "All",
+        "transitions": [
+          {
+            "state": "Completed",
+            "action": "Complete",
+            "next_state": "Completed",
+            "allowed": "Storage Administrator",
+            "allowed_user": null
+          },
+          {
+            "state": "Cancelled",
+            "action": "Terminate",
+            "next_state": "Cancelled",
+            "allowed": "Storage Administrator",
+            "allowed_user": null
+          }
+        ]
+      },
+      {
+        "state": "Completed",
+        "doc_status": "2",
+        "allow_edit": "None",
+        "transitions": []
+      },
+      {
+        "state": "Cancelled",
+        "doc_status": "2",
+        "allow_edit": "None",
+        "transitions": []
+      }
+    ]
+  },
+  {
+    "doctype": "Workflow",
+    "workflow_name": "Rental Agreement Workflow",
+    "document_type": "Rental Agreement",
+    "is_active": 1,
+    "is_submitted": 0,
+    "override_status": 0,
+    "send_email_alert": 0,
+    "workflow_data": [
+      {
+        "state": "Draft",
+        "doc_status": "0",
+        "allow_edit": "All",
+        "transitions": [
+          {
+            "state": "Active",
+            "action": "Activate",
+            "next_state": "Active",
+            "allowed": "Storage Administrator",
+            "allowed_user": null
+          },
+          {
+            "state": "Terminated",
+            "action": "Terminate",
+            "next_state": "Terminated",
+            "allowed": "Storage Administrator",
+            "allowed_user": null
+          }
+        ]
+      },
+      {
+        "state": "Active",
+        "doc_status": "1",
+        "allow_edit": "All",
+        "transitions": [
+          {
+            "state": "Expired",
+            "action": "Mark Expired",
+            "next_state": "Expired",
+            "allowed": "Storage Administrator",
+            "allowed_user": null
+          },
+          {
+            "state": "Terminated",
+            "action": "Terminate",
+            "next_state": "Terminated",
+            "allowed": "Storage Administrator",
+            "allowed_user": null
+          }
+        ]
+      },
+      {
+        "state": "Expired",
+        "doc_status": "2",
+        "allow_edit": "None",
+        "transitions": []
+      },
+      {
+        "state": "Terminated",
+        "doc_status": "2",
+        "allow_edit": "None",
+        "transitions": []
+      }
+    ]
+  }
+]

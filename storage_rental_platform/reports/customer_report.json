@@ -1,0 +1,8 @@
+{
+  "doctype": "Report",
+  "name": "Customer Report",
+  "ref_doctype": "Customer Profile",
+  "report_type": "Script Report",
+  "is_standard": "Yes",
+  "module": "Storage Rental Platform"
+}

@@ -1,0 +1,80 @@
+{
+  "doctype": "DocType",
+  "name": "Rental Plan",
+  "module": "Storage Rental Platform",
+  "autoname": "field:plan_name",
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "plan_name",
+      "label": "Plan Name",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "duration",
+      "label": "Duration (Days)",
+      "fieldtype": "Int",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "duration_type",
+      "label": "Duration Type",
+      "fieldtype": "Select",
+      "options": "Daily\nWeekly\nMonthly\nQuarterly\nYearly",
+      "default": "Monthly",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "price",
+      "label": "Price",
+      "fieldtype": "Currency",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "discount_percentage",
+      "label": "Discount Percentage",
+      "fieldtype": "Float"
+    },
+    {
+      "fieldname": "final_price",
+      "label": "Final Price",
+      "fieldtype": "Currency",
+      "read_only": 1
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "is_active",
+      "label": "Is Active",
+      "fieldtype": "Check",
+      "default": "1",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "features",
+      "label": "Features",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Storage Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Facility Manager",
+      "read": 1
+    }
+  ]
+}

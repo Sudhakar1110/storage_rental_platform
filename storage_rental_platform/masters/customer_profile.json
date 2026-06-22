@@ -1,0 +1,118 @@
+{
+  "doctype": "DocType",
+  "name": "Customer Profile",
+  "module": "Storage Rental Platform",
+  "autoname": "field:customer_name",
+  "is_submittable": 0,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "customer_name",
+      "label": "Customer Name",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "customer_type",
+      "label": "Customer Type",
+      "fieldtype": "Select",
+      "options": "Individual\nCompany",
+      "default": "Individual",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "email",
+      "label": "Email",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "mobile_number",
+      "label": "Mobile Number",
+      "fieldtype": "Data",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "phone",
+      "label": "Phone",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "address",
+      "label": "Address",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "city",
+      "label": "City",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "state",
+      "label": "State",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "pincode",
+      "label": "Pincode",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "country",
+      "label": "Country",
+      "fieldtype": "Link",
+      "options": "Country",
+      "default": "India"
+    },
+    {
+      "fieldname": "date_of_birth",
+      "label": "Date of Birth",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "id_proof",
+      "label": "ID Proof Type",
+      "fieldtype": "Select",
+      "options": "Aadhar Card\nPAN Card\nPassport\nDriving License\nVoter ID"
+    },
+    {
+      "fieldname": "id_number",
+      "label": "ID Number",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Active\nInactive\nBlocked",
+      "default": "Active",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Storage Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Facility Manager",
+      "read": 1,
+      "write": 1
+    },
+    {
+      "role": "Customer User",
+      "read": 1,
+      "write": 1
+    }
+  ]
+}

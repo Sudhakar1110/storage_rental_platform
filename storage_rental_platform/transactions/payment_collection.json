@@ -1,0 +1,143 @@
+{
+  "doctype": "DocType",
+  "name": "Payment Collection",
+  "module": "Storage Rental Platform",
+  "autoname": "hash",
+  "is_submittable": 1,
+  "track_changes": 1,
+  "fields": [
+    {
+      "fieldname": "payment_details",
+      "label": "Payment Details",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "payment_id",
+      "label": "Payment ID",
+      "fieldtype": "Data",
+      "read_only": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "customer",
+      "label": "Customer",
+      "fieldtype": "Link",
+      "options": "Customer Profile",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "rental_agreement",
+      "label": "Rental Agreement",
+      "fieldtype": "Link",
+      "options": "Rental Agreement",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "storage_booking",
+      "label": "Storage Booking",
+      "fieldtype": "Link",
+      "options": "Storage Booking"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "payment_date",
+      "label": "Payment Date",
+      "fieldtype": "Date",
+      "default": "Today",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "payment_type",
+      "label": "Payment Type",
+      "fieldtype": "Select",
+      "options": "Rent\nSecurity Deposit\nLate Fee\nOther",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "payment_mode",
+      "label": "Payment Mode",
+      "fieldtype": "Select",
+      "options": "Cash\nBank Transfer\nUPI\nCredit Card\nDebit Card\nCheque\nDemand Draft",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "amount_section",
+      "label": "Amount Details",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "amount",
+      "label": "Amount",
+      "fieldtype": "Currency",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "gst_amount",
+      "label": "GST Amount",
+      "fieldtype": "Currency"
+    },
+    {
+      "fieldname": "total_amount",
+      "label": "Total Amount",
+      "fieldtype": "Currency",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "payment_status",
+      "label": "Payment Status",
+      "fieldtype": "Select",
+      "options": "Pending\nCompleted\nFailed\nRefunded",
+      "default": "Pending",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "reference_number",
+      "label": "Reference/Transaction Number",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "payment_for_month",
+      "label": "Payment For Month",
+      "fieldtype": "Date"
+    },
+    {
+      "fieldname": "notes_section",
+      "label": "Notes",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Text Editor"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "Storage Administrator",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 1
+    },
+    {
+      "role": "Facility Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "submit": 1
+    }
+  ]
+}
