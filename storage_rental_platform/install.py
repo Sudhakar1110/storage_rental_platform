@@ -2,9 +2,37 @@ import frappe
 from frappe.utils import today, add_days
 
 
+WORKSPACE_NAMES_TO_KEEP = ["Storage Rental Platform"]
+
+
 def after_install():
     create_custom_roles()
     create_demo_data()
+
+
+def after_migrate():
+    """Cleanup orphaned workspace records that no longer exist as fixture files."""
+    cleanup_orphaned_workspaces()
+
+
+def cleanup_orphaned_workspaces():
+    """Delete workspace records that are not in the allowed keep list.
+    These are orphaned records from old fixtures that were removed."""
+    all_workspaces = frappe.get_all(
+        "Workspace",
+        fields=["name", "module"],
+        filters=[
+            ["module", "in", ["storage_rental_platform", "Storage Rental Platform"]]
+        ]
+    )
+    for ws in all_workspaces:
+        if ws.name not in WORKSPACE_NAMES_TO_KEEP:
+            try:
+                frappe.delete_doc("Workspace", ws.name, force=1, ignore_permissions=True)
+                print(f"Cleaned up orphaned workspace: {ws.name}")
+            except Exception as e:
+                print(f"Could not delete workspace {ws.name}: {e}")
+    frappe.db.commit()
 
 
 def create_custom_roles():

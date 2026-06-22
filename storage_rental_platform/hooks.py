@@ -68,3 +68,4 @@ fixtures = [
 ]
 
 after_install = "storage_rental_platform.install.after_install"
+after_migrate = "storage_rental_platform.install.after_migrate"
