@@ -471,7 +471,7 @@ def _create_pricing(facilities, categories):
 def _create_bookings(customers, units, plans):
     """Create 6 storage bookings with various statuses."""
     scenarios = [
-        # (customer, unit_key, plan, status, start_offset_days, end_offset_days, special_requirements)
+        # (customer, unit_key, plan, final_state, start_offset_days, end_offset_days, special_requirements)
         ("Rahul Sharma", "DL-M-01", "Monthly Standard", "Active", -45, 320,
          "<p>Need ground floor access for heavy boxes. Will bring own lock.</p>"),
         ("Priya Patel", "MU-S-02", "Monthly Basic", "Active", -30, 335,
@@ -487,7 +487,7 @@ def _create_bookings(customers, units, plans):
     ]
 
     created = {}
-    for customer_name, unit_key, plan_name, status, start_days, end_days, special_req in scenarios:
+    for customer_name, unit_key, plan_name, final_state, start_days, end_days, special_req in scenarios:
         customer = customers.get(customer_name)
         unit = units.get(unit_key)
         plan = plans.get(plan_name)
@@ -506,6 +506,9 @@ def _create_bookings(customers, units, plans):
         start_date = add_days(today(), start_days)
         end_date = add_days(today(), end_days)
 
+        # Insert as Draft (valid initial workflow state).
+        # Then use db.set_value to set the desired workflow_state directly,
+        # bypassing workflow transition validation (safe for demo data).
         doc = frappe.get_doc({
             "doctype": "Storage Booking",
             "customer": customer,
@@ -514,7 +517,7 @@ def _create_bookings(customers, units, plans):
             "booking_date": add_days(start_date, -7),
             "start_date": start_date,
             "end_date": end_date,
-            "status": status,
+            "status": "Draft",
             "monthly_rent": frappe.db.get_value("Storage Unit", unit, "monthly_rent") or 2000,
             "security_deposit": frappe.db.get_value("Storage Unit", unit, "security_deposit") or 4000,
             "total_amount": 6000,
@@ -524,9 +527,20 @@ def _create_bookings(customers, units, plans):
             "special_requirements": special_req,
         })
         doc.insert(ignore_permissions=True)
-        created[f"{customer_name}-{unit_key}"] = doc.name
-        print(f"  ✓ Booking: {customer_name} - {unit_key} ({status})")
 
+        # Transition to desired workflow state directly via DB
+        if final_state != "Draft":
+            state = final_state
+            # Set both workflow_state and the status field
+            frappe.db.set_value("Storage Booking", doc.name, {
+                "workflow_state": state,
+                "status": state,
+            })
+
+        created[f"{customer_name}-{unit_key}"] = doc.name
+        print(f"  ✓ Booking: {customer_name} - {unit_key} ({final_state})")
+
+    frappe.db.commit()
     return created
 
 
@@ -542,7 +556,7 @@ def _create_agreements(bookings, customers, units):
     ]
 
     created = {}
-    for booking_key, customer_name, unit_key, status, start_days, end_days, monthly_rent, deposit, total_rent, due_day, notice in agreement_map:
+    for booking_key, customer_name, unit_key, final_state, start_days, end_days, monthly_rent, deposit, total_rent, due_day, notice in agreement_map:
         booking = bookings.get(booking_key)
         customer = customers.get(customer_name)
         unit = units.get(unit_key)
@@ -573,6 +587,8 @@ def _create_agreements(bookings, customers, units):
             "</ol>"
         )
 
+        # Insert as Draft (valid initial workflow state).
+        # Then use db.set_value to set the desired workflow_state directly.
         doc = frappe.get_doc({
             "doctype": "Rental Agreement",
             "storage_booking": booking,
@@ -581,7 +597,7 @@ def _create_agreements(bookings, customers, units):
             "agreement_date": start_date,
             "start_date": start_date,
             "end_date": end_date,
-            "status": status,
+            "status": "Draft",
             "monthly_rent": monthly_rent,
             "security_deposit": deposit,
             "total_rent": total_rent,
@@ -592,9 +608,18 @@ def _create_agreements(bookings, customers, units):
             "notes": f"<p>Agreement for {customer_name} at unit {unit_key}.</p>"
         })
         doc.insert(ignore_permissions=True)
-        created[booking_key] = doc.name
-        print(f"  ✓ Agreement: {customer_name} - {unit_key} ({status})")
 
+        # Transition to desired workflow state directly via DB
+        if final_state != "Draft":
+            frappe.db.set_value("Rental Agreement", doc.name, {
+                "workflow_state": final_state,
+                "status": final_state,
+            })
+
+        created[booking_key] = doc.name
+        print(f"  ✓ Agreement: {customer_name} - {unit_key} ({final_state})")
+
+    frappe.db.commit()
     return created
 
 
