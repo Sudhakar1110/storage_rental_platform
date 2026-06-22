@@ -10,9 +10,40 @@ def after_install():
     create_demo_data()
 
 
+REPORT_REF_DOCTYPES = {
+    "Storage Booking Report": "Storage Booking",
+    "Active Rental Report": "Rental Agreement",
+    "Customer Report": "Customer Profile",
+    "Facility Occupancy Report": "Storage Facility",
+    "Payment Collection Report": "Payment Collection",
+    "Unit Availability Report": "Storage Unit",
+    "Rental Agreement Report": "Rental Agreement",
+}
+
+
 def after_migrate():
-    """Cleanup orphaned workspace records that no longer exist as fixture files."""
+    """Run post-migration tasks."""
     cleanup_orphaned_workspaces()
+    fix_reports_ref_doctype()
+
+
+def fix_reports_ref_doctype():
+    """Fix Report records that are missing ref_doctype.
+    
+    This ensures existing Report records have their ref_doctype set correctly
+    even if sync_for() skipped them due to timestamp comparison.
+    """
+    for report_name, ref_doctype in REPORT_REF_DOCTYPES.items():
+        if not frappe.db.exists("Report", report_name):
+            continue
+        current = frappe.db.get_value("Report", report_name, "ref_doctype")
+        if not current:
+            try:
+                frappe.db.set_value("Report", report_name, "ref_doctype", ref_doctype)
+                print(f"Fixed ref_doctype for Report: {report_name} -> {ref_doctype}")
+            except Exception as e:
+                print(f"Could not fix Report {report_name}: {e}")
+    frappe.db.commit()
 
 
 def cleanup_orphaned_workspaces():
