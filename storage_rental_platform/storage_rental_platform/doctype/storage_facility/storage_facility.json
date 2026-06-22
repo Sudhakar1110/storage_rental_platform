@@ -54,6 +54,22 @@
       "fieldname": "description",
       "label": "Description",
       "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "media_section",
+      "label": "Media",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "facility_image",
+      "label": "Facility Image",
+      "fieldtype": "Attach Image"
+    },
+    {
+      "fieldname": "facility_gallery",
+      "label": "Facility Gallery",
+      "fieldtype": "Table",
+      "options": "Facility Gallery Item"
     }
   ],
   "permissions": [

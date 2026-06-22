@@ -74,6 +74,32 @@
       "fieldname": "description",
       "label": "Description",
       "fieldtype": "Text Editor"
+    },
+    {
+      "fieldname": "media_section",
+      "label": "Media",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "room_image",
+      "label": "Room Image",
+      "fieldtype": "Attach Image"
+    },
+    {
+      "fieldname": "room_gallery",
+      "label": "Room Gallery",
+      "fieldtype": "Table",
+      "options": "Room Gallery Item"
+    },
+    {
+      "fieldname": "virtual_tour_section",
+      "label": "Virtual Tour",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "360_view_url",
+      "label": "360\u00b0 View URL",
+      "fieldtype": "Data"
     }
   ],
   "permissions": [

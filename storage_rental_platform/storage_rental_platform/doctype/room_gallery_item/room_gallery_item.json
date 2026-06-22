@@ -1,0 +1,20 @@
+{
+  "doctype": "DocType",
+  "name": "Room Gallery Item",
+  "module": "storage_rental_platform",
+  "istable": 1,
+  "fields": [
+    {
+      "fieldname": "image",
+      "label": "Image",
+      "fieldtype": "Attach Image",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Data"
+    }
+  ],
+  "permissions": []
+}
