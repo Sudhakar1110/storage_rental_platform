@@ -20,6 +20,149 @@
     "role": "Facility Manager"
    }
   ],
-  "content": "[{\"type\":\"card\",\"label\":\"Masters\",\"links\":[{\"label\":\"Storage Facility\",\"link_to\":\"Storage Facility\",\"link_type\":\"DocType\"},{\"label\":\"Storage Category\",\"link_to\":\"Storage Category\",\"link_type\":\"DocType\"},{\"label\":\"Storage Unit\",\"link_to\":\"Storage Unit\",\"link_type\":\"DocType\"},{\"label\":\"Customer Profile\",\"link_to\":\"Customer Profile\",\"link_type\":\"DocType\"},{\"label\":\"Rental Plan\",\"link_to\":\"Rental Plan\",\"link_type\":\"DocType\"},{\"label\":\"Pricing\",\"link_to\":\"Pricing\",\"link_type\":\"DocType\"}]},{\"type\":\"card\",\"label\":\"Transactions\",\"links\":[{\"label\":\"Storage Booking\",\"link_to\":\"Storage Booking\",\"link_type\":\"DocType\"},{\"label\":\"Rental Agreement\",\"link_to\":\"Rental Agreement\",\"link_type\":\"DocType\"},{\"label\":\"Payment Collection\",\"link_to\":\"Payment Collection\",\"link_type\":\"DocType\"},{\"label\":\"Unit Handover\",\"link_to\":\"Unit Handover\",\"link_type\":\"DocType\"}]},{\"type\":\"card\",\"label\":\"Reports\",\"links\":[{\"label\":\"Storage Booking Report\",\"link_to\":\"Storage Booking Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Active Rental Report\",\"link_to\":\"Active Rental Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Customer Report\",\"link_to\":\"Customer Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Facility Occupancy Report\",\"link_to\":\"Facility Occupancy Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Payment Collection Report\",\"link_to\":\"Payment Collection Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Unit Availability Report\",\"link_to\":\"Unit Availability Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Rental Agreement Report\",\"link_to\":\"Rental Agreement Report\",\"link_type\":\"Report\",\"is_query_report\":1}]}]"
+  "content": "[{\"type\":\"card\",\"label\":\"Masters\",\"links\":[{\"label\":\"Storage Facility\",\"link_to\":\"Storage Facility\",\"link_type\":\"DocType\"},{\"label\":\"Storage Category\",\"link_to\":\"Storage Category\",\"link_type\":\"DocType\"},{\"label\":\"Storage Unit\",\"link_to\":\"Storage Unit\",\"link_type\":\"DocType\"},{\"label\":\"Customer Profile\",\"link_to\":\"Customer Profile\",\"link_type\":\"DocType\"},{\"label\":\"Rental Plan\",\"link_to\":\"Rental Plan\",\"link_type\":\"DocType\"},{\"label\":\"Pricing\",\"link_to\":\"Pricing\",\"link_type\":\"DocType\"}]},{\"type\":\"card\",\"label\":\"Transactions\",\"links\":[{\"label\":\"Storage Booking\",\"link_to\":\"Storage Booking\",\"link_type\":\"DocType\"},{\"label\":\"Rental Agreement\",\"link_to\":\"Rental Agreement\",\"link_type\":\"DocType\"},{\"label\":\"Payment Collection\",\"link_to\":\"Payment Collection\",\"link_type\":\"DocType\"},{\"label\":\"Unit Handover\",\"link_to\":\"Unit Handover\",\"link_type\":\"DocType\"}]},{\"type\":\"card\",\"label\":\"Reports\",\"links\":[{\"label\":\"Storage Booking Report\",\"link_to\":\"Storage Booking Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Active Rental Report\",\"link_to\":\"Active Rental Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Customer Report\",\"link_to\":\"Customer Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Facility Occupancy Report\",\"link_to\":\"Facility Occupancy Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Payment Collection Report\",\"link_to\":\"Payment Collection Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Unit Availability Report\",\"link_to\":\"Unit Availability Report\",\"link_type\":\"Report\",\"is_query_report\":1},{\"label\":\"Rental Agreement Report\",\"link_to\":\"Rental Agreement Report\",\"link_type\":\"Report\",\"is_query_report\":1}]}]",
+  "links": [
+   {
+    "type": "Card Break",
+    "label": "Masters",
+    "idx": 1
+   },
+   {
+    "type": "Link",
+    "label": "Storage Facility",
+    "link_type": "DocType",
+    "link_to": "Storage Facility",
+    "idx": 2
+   },
+   {
+    "type": "Link",
+    "label": "Storage Category",
+    "link_type": "DocType",
+    "link_to": "Storage Category",
+    "idx": 3
+   },
+   {
+    "type": "Link",
+    "label": "Storage Unit",
+    "link_type": "DocType",
+    "link_to": "Storage Unit",
+    "idx": 4
+   },
+   {
+    "type": "Link",
+    "label": "Customer Profile",
+    "link_type": "DocType",
+    "link_to": "Customer Profile",
+    "idx": 5
+   },
+   {
+    "type": "Link",
+    "label": "Rental Plan",
+    "link_type": "DocType",
+    "link_to": "Rental Plan",
+    "idx": 6
+   },
+   {
+    "type": "Link",
+    "label": "Pricing",
+    "link_type": "DocType",
+    "link_to": "Pricing",
+    "idx": 7
+   },
+   {
+    "type": "Card Break",
+    "label": "Transactions",
+    "idx": 8
+   },
+   {
+    "type": "Link",
+    "label": "Storage Booking",
+    "link_type": "DocType",
+    "link_to": "Storage Booking",
+    "idx": 9
+   },
+   {
+    "type": "Link",
+    "label": "Rental Agreement",
+    "link_type": "DocType",
+    "link_to": "Rental Agreement",
+    "idx": 10
+   },
+   {
+    "type": "Link",
+    "label": "Payment Collection",
+    "link_type": "DocType",
+    "link_to": "Payment Collection",
+    "idx": 11
+   },
+   {
+    "type": "Link",
+    "label": "Unit Handover",
+    "link_type": "DocType",
+    "link_to": "Unit Handover",
+    "idx": 12
+   },
+   {
+    "type": "Card Break",
+    "label": "Reports",
+    "idx": 13
+   },
+   {
+    "type": "Link",
+    "label": "Storage Booking Report",
+    "link_type": "Report",
+    "link_to": "Storage Booking Report",
+    "is_query_report": 1,
+    "idx": 14
+   },
+   {
+    "type": "Link",
+    "label": "Active Rental Report",
+    "link_type": "Report",
+    "link_to": "Active Rental Report",
+    "is_query_report": 1,
+    "idx": 15
+   },
+   {
+    "type": "Link",
+    "label": "Customer Report",
+    "link_type": "Report",
+    "link_to": "Customer Report",
+    "is_query_report": 1,
+    "idx": 16
+   },
+   {
+    "type": "Link",
+    "label": "Facility Occupancy Report",
+    "link_type": "Report",
+    "link_to": "Facility Occupancy Report",
+    "is_query_report": 1,
+    "idx": 17
+   },
+   {
+    "type": "Link",
+    "label": "Payment Collection Report",
+    "link_type": "Report",
+    "link_to": "Payment Collection Report",
+    "is_query_report": 1,
+    "idx": 18
+   },
+   {
+    "type": "Link",
+    "label": "Unit Availability Report",
+    "link_type": "Report",
+    "link_to": "Unit Availability Report",
+    "is_query_report": 1,
+    "idx": 19
+   },
+   {
+    "type": "Link",
+    "label": "Rental Agreement Report",
+    "link_type": "Report",
+    "link_to": "Rental Agreement Report",
+    "is_query_report": 1,
+    "idx": 20
+   }
+  ]
  }
 ]
