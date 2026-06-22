@@ -1,7 +1,7 @@
 {
   "doctype": "DocType",
   "name": "Storage Unit",
-  "module": "Storage Rental Platform",
+  "module": "storage_rental_platform",
   "autoname": "field:unit_number",
   "is_submittable": 0,
   "track_changes": 1,

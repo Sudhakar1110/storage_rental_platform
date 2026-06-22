@@ -1,7 +1,7 @@
 {
   "doctype": "DocType",
   "name": "Pricing",
-  "module": "Storage Rental Platform",
+  "module": "storage_rental_platform",
   "autoname": "field:pricing_name",
   "is_submittable": 0,
   "track_changes": 1,

@@ -1,7 +1,7 @@
 {
   "doctype": "DocType",
   "name": "Rental Plan",
-  "module": "Storage Rental Platform",
+  "module": "storage_rental_platform",
   "autoname": "field:plan_name",
   "is_submittable": 0,
   "track_changes": 1,

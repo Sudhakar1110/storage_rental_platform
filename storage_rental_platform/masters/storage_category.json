@@ -1,7 +1,7 @@
 {
   "doctype": "DocType",
   "name": "Storage Category",
-  "module": "Storage Rental Platform",
+  "module": "storage_rental_platform",
   "autoname": "field:category_name",
   "is_submittable": 0,
   "track_changes": 1,

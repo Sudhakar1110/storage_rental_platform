@@ -2,7 +2,7 @@
  "doctype": "Workspace",
  "name": "Masters",
  "label": "Masters",
- "module": "Storage Rental Platform",
+ "module": "storage_rental_platform",
  "icon": "inventory",
  "color": "green",
  "sequence_id": 2.0,

@@ -2,7 +2,7 @@
  "doctype": "Workspace",
  "name": "Storage Rental Platform",
  "label": "Storage Rental Platform",
- "module": "Storage Rental Platform",
+ "module": "storage_rental_platform",
  "icon": "storage",
  "color": "blue",
  "sequence_id": 1.0,

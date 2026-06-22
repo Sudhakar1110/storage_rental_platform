@@ -2,7 +2,7 @@
  "doctype": "Workspace",
  "name": "Transactions",
  "label": "Transactions",
- "module": "Storage Rental Platform",
+ "module": "storage_rental_platform",
  "icon": "file",
  "color": "orange",
  "sequence_id": 3.0,

@@ -61,7 +61,7 @@ fixtures = [
             [
                 "module",
                 "=",
-                "Storage Rental Platform"
+                "storage_rental_platform"
             ]
         ]
     }

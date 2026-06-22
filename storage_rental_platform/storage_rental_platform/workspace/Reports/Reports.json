@@ -2,7 +2,7 @@
  "doctype": "Workspace",
  "name": "Reports",
  "label": "Reports",
- "module": "Storage Rental Platform",
+ "module": "storage_rental_platform",
  "icon": "report",
  "color": "red",
  "sequence_id": 4.0,

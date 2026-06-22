@@ -1,7 +1,7 @@
 {
   "doctype": "DocType",
   "name": "Handover Checklist",
-  "module": "Storage Rental Platform",
+  "module": "storage_rental_platform",
   "istable": 1,
   "fields": [
     {
