@@ -27,7 +27,7 @@ def execute(filters=None):
             ra.status
         FROM `tabRental Agreement` ra
         LEFT JOIN `tabStorage Unit` su ON ra.storage_unit = su.name
-        WHERE ra.docstatus = 1 AND ra.status = 'Active'
+        WHERE ra.status = 'Active'
     """
 
     if filters:
