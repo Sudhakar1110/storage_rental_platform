@@ -106,7 +106,8 @@ def _create_comprehensive_demo_data():
     """Create comprehensive demo data on migrate if not already done.
     Uses a flag to ensure it only runs once.
     """
-    if frappe.db.get_single_value("System Settings", _DEMO_FLAG):
+    # Use raw get_value/set_value to avoid field validation on non-existent field
+    if frappe.db.get_value("System Settings", "System Settings", _DEMO_FLAG):
         return
 
     from storage_rental_platform.demo_data import create_demo_data
@@ -114,7 +115,7 @@ def _create_comprehensive_demo_data():
 
     # Set flag so this only runs once
     try:
-        frappe.db.set_single_value("System Settings", _DEMO_FLAG, 1)
+        frappe.db.set_value("System Settings", "System Settings", _DEMO_FLAG, 1)
         frappe.db.commit()
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"Could not set demo data flag: {e}")
