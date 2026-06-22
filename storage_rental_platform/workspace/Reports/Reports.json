@@ -1,0 +1,21 @@
+{
+ "doctype": "Workspace",
+ "name": "Reports",
+ "label": "Reports",
+ "module": "Storage Rental Platform",
+ "icon": "report",
+ "color": "red",
+ "sequence_id": 4.0,
+ "is_default": 0,
+ "is_hidden": 0,
+ "public": 1,
+ "roles": [
+  {
+   "role": "Storage Administrator"
+  },
+  {
+   "role": "Facility Manager"
+  }
+ ],
+ "content": "[{\"type\":\"card\",\"label\":\"Booking Reports\"},{\"type\":\"link\",\"label\":\"Storage Booking Report\",\"link_to\":\"Storage Booking Report\",\"link_type\":\"Report\"},{\"type\":\"card_break\",\"label\":\"Rental Reports\"},{\"type\":\"link\",\"label\":\"Active Rental Report\",\"link_to\":\"Active Rental Report\",\"link_type\":\"Report\"},{\"type\":\"link\",\"label\":\"Rental Agreement Report\",\"link_to\":\"Rental Agreement Report\",\"link_type\":\"Report\"},{\"type\":\"card_break\",\"label\":\"Customer Reports\"},{\"type\":\"link\",\"label\":\"Customer Report\",\"link_to\":\"Customer Report\",\"link_type\":\"Report\"},{\"type\":\"card_break\",\"label\":\"Facility Reports\"},{\"type\":\"link\",\"label\":\"Facility Occupancy Report\",\"link_to\":\"Facility Occupancy Report\",\"link_type\":\"Report\"},{\"type\":\"link\",\"label\":\"Unit Availability Report\",\"link_to\":\"Unit Availability Report\",\"link_type\":\"Report\"},{\"type\":\"card_break\",\"label\":\"Financial Reports\"},{\"type\":\"link\",\"label\":\"Payment Collection Report\",\"link_to\":\"Payment Collection Report\",\"link_type\":\"Report\"}]"
+}

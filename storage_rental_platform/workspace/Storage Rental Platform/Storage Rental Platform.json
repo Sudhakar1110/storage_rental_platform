@@ -1,0 +1,21 @@
+{
+ "doctype": "Workspace",
+ "name": "Storage Rental Platform",
+ "label": "Storage Rental Platform",
+ "module": "Storage Rental Platform",
+ "icon": "storage",
+ "color": "blue",
+ "sequence_id": 1.0,
+ "is_default": 1,
+ "is_hidden": 0,
+ "public": 1,
+ "roles": [
+  {
+   "role": "Storage Administrator"
+  },
+  {
+   "role": "Facility Manager"
+  }
+ ],
+ "content": "[{\"type\":\"card\",\"label\":\"Masters\"},{\"type\":\"link\",\"label\":\"Storage Facility\",\"link_to\":\"Storage Facility\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Storage Category\",\"link_to\":\"Storage Category\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Storage Unit\",\"link_to\":\"Storage Unit\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Customer Profile\",\"link_to\":\"Customer Profile\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Rental Plan\",\"link_to\":\"Rental Plan\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Pricing\",\"link_to\":\"Pricing\",\"link_type\":\"DocType\"},{\"type\":\"card_break\",\"label\":\"Transactions\"},{\"type\":\"link\",\"label\":\"Storage Booking\",\"link_to\":\"Storage Booking\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Rental Agreement\",\"link_to\":\"Rental Agreement\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Payment Collection\",\"link_to\":\"Payment Collection\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Unit Handover\",\"link_to\":\"Unit Handover\",\"link_type\":\"DocType\"},{\"type\":\"card_break\",\"label\":\"Reports\"},{\"type\":\"link\",\"label\":\"Storage Booking Report\",\"link_to\":\"Storage Booking Report\",\"link_type\":\"Report\"},{\"type\":\"link\",\"label\":\"Active Rental Report\",\"link_to\":\"Active Rental Report\",\"link_type\":\"Report\"},{\"type\":\"link\",\"label\":\"Customer Report\",\"link_to\":\"Customer Report\",\"link_type\":\"Report\"},{\"type\":\"link\",\"label\":\"Facility Occupancy Report\",\"link_to\":\"Facility Occupancy Report\",\"link_type\":\"Report\"},{\"type\":\"link\",\"label\":\"Payment Collection Report\",\"link_to\":\"Payment Collection Report\",\"link_type\":\"Report\"},{\"type\":\"link\",\"label\":\"Unit Availability Report\",\"link_to\":\"Unit Availability Report\",\"link_type\":\"Report\"},{\"type\":\"link\",\"label\":\"Rental Agreement Report\",\"link_to\":\"Rental Agreement Report\",\"link_type\":\"Report\"}]"
+}

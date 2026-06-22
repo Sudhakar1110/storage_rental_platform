@@ -54,6 +54,16 @@ fixtures = [
                 ]
             ]
         ]
+    },
+    {
+        "doctype": "Workspace",
+        "filters": [
+            [
+                "module",
+                "=",
+                "Storage Rental Platform"
+            ]
+        ]
     }
 ]
 

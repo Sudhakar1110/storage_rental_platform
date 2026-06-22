@@ -1,0 +1,21 @@
+{
+ "doctype": "Workspace",
+ "name": "Masters",
+ "label": "Masters",
+ "module": "Storage Rental Platform",
+ "icon": "inventory",
+ "color": "green",
+ "sequence_id": 2.0,
+ "is_default": 0,
+ "is_hidden": 0,
+ "public": 1,
+ "roles": [
+  {
+   "role": "Storage Administrator"
+  },
+  {
+   "role": "Facility Manager"
+  }
+ ],
+ "content": "[{\"type\":\"card\",\"label\":\"Master Data\"},{\"type\":\"link\",\"label\":\"Storage Facility\",\"link_to\":\"Storage Facility\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Storage Category\",\"link_to\":\"Storage Category\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Storage Unit\",\"link_to\":\"Storage Unit\",\"link_type\":\"DocType\"},{\"type\":\"card_break\",\"label\":\"Customer Management\"},{\"type\":\"link\",\"label\":\"Customer Profile\",\"link_to\":\"Customer Profile\",\"link_type\":\"DocType\"},{\"type\":\"card_break\",\"label\":\"Pricing\"},{\"type\":\"link\",\"label\":\"Rental Plan\",\"link_to\":\"Rental Plan\",\"link_type\":\"DocType\"},{\"type\":\"link\",\"label\":\"Pricing\",\"link_to\":\"Pricing\",\"link_type\":\"DocType\"}]"
+}
