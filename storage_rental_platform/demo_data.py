@@ -528,14 +528,12 @@ def _create_bookings(customers, units, plans):
         })
         doc.insert(ignore_permissions=True)
 
-        # Transition to desired workflow state directly via DB
+        # Set the status field directly via DB to bypass workflow validation.
+        # workflow_state column may not exist in the table yet (added by Frappe
+        # when workflow is activated on a DocType), so we only set status.
+        # Since override_status=0, status and workflow_state are independent.
         if final_state != "Draft":
-            state = final_state
-            # Set both workflow_state and the status field
-            frappe.db.set_value("Storage Booking", doc.name, {
-                "workflow_state": state,
-                "status": state,
-            })
+            frappe.db.set_value("Storage Booking", doc.name, "status", final_state)
 
         created[f"{customer_name}-{unit_key}"] = doc.name
         print(f"  ✓ Booking: {customer_name} - {unit_key} ({final_state})")
@@ -609,12 +607,10 @@ def _create_agreements(bookings, customers, units):
         })
         doc.insert(ignore_permissions=True)
 
-        # Transition to desired workflow state directly via DB
+        # Set the status field directly via DB to bypass workflow validation.
+        # workflow_state column may not exist yet.
         if final_state != "Draft":
-            frappe.db.set_value("Rental Agreement", doc.name, {
-                "workflow_state": final_state,
-                "status": final_state,
-            })
+            frappe.db.set_value("Rental Agreement", doc.name, "status", final_state)
 
         created[booking_key] = doc.name
         print(f"  ✓ Agreement: {customer_name} - {unit_key} ({final_state})")
