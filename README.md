@@ -1,0 +1,1 @@
+# storage_rental_platform
